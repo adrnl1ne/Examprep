@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exam prep</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <script>
+        $(function () {
+            $("#tabs").tabs();
+            $("#tabs-area-1").tabs();
+
+            $("#button").click(function () {
+                $.ajax({
+                    url: "https://api.nationalize.io/?name=" + encodeURIComponent($("#name").val()),
+                    success: function (result) {
+                        $("#webresult").html("");
+                        $.each(result.country, function (i) {
+                            $.each(result.country[i], function (key, val) {
+                                $("#webresult").append("<div>" + key + ":" + val + "</div>");
+                            });
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="tabs" class="ui-tabs ui-corner-all ui-widget ui-widget-content">
+
+    <ul role="tablist" class="ui-tabs-nav ui-corner-all ui-helper-reset ui-helper-clearfix ui-widget-header">
+        <li role="tab" tabindex="0" class="ui-tabs-nav ui-corner-top ui-state-default ui-tab
+    ui-tabs-active ui-state-active" aria-controls="start" aria-labelledby="ui-id-1"
+            aria-selected="true" aria-expanded="true">
+            <a href="#start" tabindex="-1" class="ui-tabs-anchor" id="ui-id-1">Start</a>
+        </li>
+        <li role="tab" tabindex="-1" class="ui-tabs-nav ui-corner-top ui-state-default ui-tab"
+            aria-controls="area-1" aria-labelledby="ui-id-2" aria-selected="false" aria-expanded="false">
+            <a href="#area-1" tabindex="-1" class="ui-tabs-anchor" id="ui-id-2">Area 1</a>
+        </li>
+        <li role="tab" tabindex="-1" class="ui-tabs-nav ui-corner-top ui-state-default ui-tab"
+            aria-controls="area-2" aria-labelledby="ui-id-3" aria-selected="false" aria-expanded="false">
+            <a href="#area-2" tabindex="-1" class="ui-tabs-anchor" id="ui-id-3">Area 2</a>
+        </li>
+        <li role="tab" tabindex="-1" class="ui-tabs-nav ui-corner-top ui-state-default ui-tab"
+            aria-controls="area-3" aria-labelledby="ui-id-4" aria-selected="false" aria-expanded="false">
+            <a href="#area-3" tabindex="-1" class="ui-tabs-anchor" id="ui-id-4">Area 3</a>
+        </li>
+        <li role="tab" tabindex="-1" class="ui-tabs-nav ui-corner-top ui-state-default ui-tab"
+            aria-controls="area-4" aria-labelledby="ui-id-5" aria-selected="false" aria-expanded="false">
+            <a href="#area-4" tabindex="-1" class="ui-tabs-anchor" id="ui-id-5">Area 4</a>
+        </li>
+        <li role="tab" tabindex="-1" class="ui-tabs-nav ui-corner-top ui-state-default ui-tab"
+            aria-controls="webs" aria-labelledby="ui-id-6" aria-selected="false" aria-expanded="false">
+            <a href="#webs" tabindex="-1" class="ui-tabs-anchor" id="ui-id-6">Webservice</a>
+        </li>
+    </ul>
+
+    <div id="start" aria-labelledby="ui-id-1" role="tabpanel" class="ui-tabs-panel ui-corner-bottom
+    ui-widget-content" aria-hidden="false">
+        <p>
+            <b>This program uses the 4 learning areas</b>
+        </p>
+        <table>
+            <tbody>
+            <tr>Area 1: Cloud, Operative Systems, Databases</tr>
+            <tr>Area 2: Number Systems, Debug</tr>
+            <tr>Area 3: Concurrency Issues</tr>
+            <tr>Area 4: Computer Network</tr>
+            <tr>Webservice: Test</tr>
+            </tbody>
+        </table>
+        <br>
+        "This project is made by:"
+        <br>
+        <br>
+        "(Insert Name Here)... And also mail and credit card info"
+        <br>
+        <br>
+        "Deadline: 27/11/2022"
+    </div>
+
+    <div id="area-1" aria-labelledby="ui-id-2" role="tabpanel" class="ui-tabs-panel ui-corner-bottom
+    ui-widget-content" aria-hidden="true" style="display: none;">
+
+        <div id="tabs-area-1" class="ui-tabs ui-corner-all ui-widget ui-widget-content">
+
+            <ul role="tablist" class="ui-tabs-nav ui-corner-all ui-helper-reset ui-helper-clearfix ui-widget-header">
+
+                <li role="tab" tabindex="-1" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab"
+                    aria-controls="qs-1" aria-labelledby="ui-id-7" aria-selected="false" aria-expanded="false">
+                    <a href="#qs-1" tabindex="-1" class="ui-tabs-anchor" id="ui-id-7">1</a>
+                </li>
+                <li role="tab" tabindex="-1" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab"
+                    aria-controls="qs-2" aria-labelledby="ui-id-8" aria-selected="false" aria-expanded="false">
+                    <a href="#qs-2" tabindex="-1" class="ui-tabs-anchor" id="ui-id-8">2</a>
+                </li>
+                <li role="tab" tabindex="-1" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab"
+                    aria-controls="qs-3" aria-labelledby="ui-id-9" aria-selected="false" aria-expanded="false">
+                    <a href="#qs-3" tabindex="-1" class="ui-tabs-anchor" id="ui-id-9">3</a>
+                </li>
+                <li role="tab" tabindex="-1" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab"
+                    aria-controls="qs-4" aria-labelledby="ui-id-10" aria-selected="false" aria-expanded="false">
+                    <a href="#qs-4" tabindex="-1" class="ui-tabs-anchor" id="ui-id-10">4</a>
+                </li>
+                <li role="tab" tabindex="-1" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab"
+                    aria-controls="qs-5" aria-labelledby="ui-id-11" aria-selected="false" aria-expanded="false">
+                    <a href="#qs-5" tabindex="-1" class="ui-tabs-anchor" id="ui-id-11">5</a>
+                </li>
+                <li role="tab" tabindex="-1" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab"
+                    aria-controls="qs-6" aria-labelledby="ui-id-12" aria-selected="false" aria-expanded="false">
+                    <a href="#qs-6" tabindex="-1" class="ui-tabs-anchor" id="ui-id-12">6</a>
+                </li>
+                <li role="tab" tabindex="-1" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab"
+                    aria-controls="qs-7" aria-labelledby="ui-id-13" aria-selected="false" aria-expanded="false">
+                    <a href="#qs-7" tabindex="-1" class="ui-tabs-anchor" id="ui-id-13">7</a>
+                </li>
+                <li role="tab" tabindex="-1" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab"
+                    aria-controls="qs-8" aria-labelledby="ui-id-14" aria-selected="false" aria-expanded="false">
+                    <a href="#qs-8" tabindex="-1" class="ui-tabs-anchor" id="ui-id-14">8</a>
+                </li>
+                <li role="tab" tabindex="-1" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab"
+                    aria-controls="qs-9" aria-labelledby="ui-id-15" aria-selected="false" aria-expanded="false">
+                    <a href="#qs-9" tabindex="-1" class="ui-tabs-anchor" id="ui-id-15">9</a>
+                </li>
+            </ul>
+
+            <div id="qs-1" aria-labelledby="ui-id-7" role="tabpanel" class="ui-tabs-panel ui-corner-bottom
+    ui-widget-content" aria-hidden="true" style="display: none;">
+                <p>Questions:</p>
+                <br>
+                "1. Describe a computers hardware"
+                <br>
+                "Answer:"
+                <br>
+                "A computer consists of following hardware:<br>
+                CPU, <br>Motherboard, <br>SSD, <br>RAM, <br>GPU, <br>Power supply, <br>Wlan-adapter,
+                <br>Wireless Wlan-adapter, <br>Cooling system (Fans, liquid cooling, etc.), <br>(Casing)"
+            </div>
+
+            <div id="qs-2" aria-labelledby="ui-id-8" role="tabpanel" class="ui-tabs-panel ui-corner-bottom
+    ui-widget-content" aria-hidden="true" style="display: none;">
+                <p>Questions:</p>
+                <br>
+                "2. Describe Azure Cloud and its uses"
+                <br>
+                "Answer:"
+                <br>
+                ""
+            </div>
+
+            <div id="qs-3" aria-labelledby="ui-id-9" role="tabpanel" class="ui-tabs-panel ui-corner-bottom
+    ui-widget-content" aria-hidden="true" style="display: none;">
+                <p>Questions:</p>
+                <br>
+                "3. What is a Raspberry Pi and what are its uses?"
+                <br>
+                "Answer:"
+                <br>
+            </div>
+
+            <div id="qs-4" aria-labelledby="ui-id-10" role="tabpanel" class="ui-tabs-panel ui-corner-bottom
+    ui-widget-content" aria-hidden="true" style="display: none;">
+                <p>Questions:</p>
+                <br>
+                "4. What are the different types of hard-discs, and what are the difference between them?"
+                <br>
+                "Answer:"
+                <br>
+            </div>
+
+            <div id="qs-5" aria-labelledby="ui-id-11" role="tabpanel" class="ui-tabs-panel ui-corner-bottom
+    ui-widget-content" aria-hidden="true" style="display: none;">
+                <p>Questions:</p>
+                <br>
+                "5. What types of busses are there in a computer?"
+                <br>
+                "Answer:"
+                <br>
+            </div>
+
+            <div id="qs-6" aria-labelledby="ui-id-12" role="tabpanel" class="ui-tabs-panel ui-corner-bottom
+    ui-widget-content" aria-hidden="true" style="display: none;">
+                <p>Questions:</p>
+                <br>
+                "6. Computer-network: What is the difference between IP and MAC?"
+                <br>
+                "Answer:"
+                <br>
+            </div>
+
+            <div id="qs-7" aria-labelledby="ui-id-13" role="tabpanel" class="ui-tabs-panel ui-corner-bottom
+    ui-widget-content" aria-hidden="true" style="display: none;">
+                <p>Questions:</p>
+                <br>
+                "7. What are the categories of PSU and what do they mean?"
+                <br>
+                "Answer:"
+                <br>
+            </div>
+
+            <div id="qs-8" aria-labelledby="ui-id-14" role="tabpanel" class="ui-tabs-panel ui-corner-bottom
+    ui-widget-content" aria-hidden="true" style="display: none;">
+                <p>Questions:</p>
+                <br>
+                "8. What is the difference between RAM and a Hard-disc?"
+                <br>
+                "Answer:"
+                <br>
+            </div>
+
+            <div id="qs-9" aria-labelledby="ui-id-15" role="tabpanel" class="ui-tabs-panel ui-corner-bottom
+    ui-widget-content" aria-hidden="true" style="display: none;">
+                <p>Questions:</p>
+                <br>
+                "9. What is DBMS MySQL and what can you use it for?"
+                <br>
+                "Answer:"
+                <br>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div id="area-2" aria-labelledby="ui-id-3" role="tabpanel" class="ui-tabs-panel ui-corner-bottom
+    ui-widget-content" aria-hidden="true" style="display: none;">
+        <ul role="tablist" class="ui-tabs-nav ui-corner-all ui-helper-reset ui-helper-clearfix ui-widget-header">
+            <li role="tab" tabindex="-1" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab"
+                aria-controls="2-qs-1" aria-labelledby="ui-id-16" aria-selected="false" aria-expanded="false">
+                <a href="#2-qs-1" tabindex="-1" class="ui-tabs-anchor" id="ui-id-16">1</a>
+            </li>
+            <li role="tab" tabindex="-1" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab"
+                aria-controls="2-qs-2" aria-labelledby="ui-id-17" aria-selected="false" aria-expanded="false">
+                <a href="#2-qs-2" tabindex="-1" class="ui-tabs-anchor" id="ui-id-17">2</a>
+            </li>
+            <li role="tab" tabindex="-1" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab"
+                aria-controls="2-qs-3" aria-labelledby="ui-id-18" aria-selected="false" aria-expanded="false">
+                <a href="#2-qs-3" tabindex="-1" class="ui-tabs-anchor" id="ui-id-18">3</a>
+            </li>
+            <li role="tab" tabindex="-1" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab"
+                aria-controls="2-qs-4" aria-labelledby="ui-id-19" aria-selected="false" aria-expanded="false">
+                <a href="#2-qs-4" tabindex="-1" class="ui-tabs-anchor" id="ui-id-19">4</a>
+            </li>
+            <li role="tab" tabindex="-1" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab"
+                aria-controls="2-qs-5" aria-labelledby="ui-id-20" aria-selected="false" aria-expanded="false">
+                <a href="#2-qs-5" tabindex="-1" class="ui-tabs-anchor" id="ui-id-20">5</a>
+            </li>
+        </ul>
+
+        <div id="2-qs-1" aria-labelledby="ui-id-16" role="tabpanel" class="ui-tabs-panel ui-corner-bottom
+    ui-widget-content" aria-hidden="true" style="display: none;">
+            <p>Questions:</p>
+            <br>
+            "1. Explain the uses of the following number-systems and their names:<br>
+            16-system<br>
+            10-system<br>
+            2-system"
+            <br>
+            "Answer:"
+            <br>
+        </div>
+
+        <div id="2-qs-2" aria-labelledby="ui-id-17" role="tabpanel" class="ui-tabs-panel ui-corner-bottom
+    ui-widget-content" aria-hidden="true" style="display: none;">
+            <p>Questions:</p>
+            <br>
+            "2. Explain how to calculate between binary and decimal"
+            <br>
+            "Answer:"
+            <br>
+        </div>
+
+        <div id="2-qs-3" aria-labelledby="ui-id-18" role="tabpanel" class="ui-tabs-panel ui-corner-bottom
+    ui-widget-content" aria-hidden="true" style="display: none;">
+            <p>Questions:</p>
+            <br>
+            "3. Explain how to calculate between binary and hexadecimal"
+            <br>
+            "Answer:"
+            <br>
+        </div>
+
+        <div id="2-qs-4" aria-labelledby="ui-id-19" role="tabpanel" class="ui-tabs-panel ui-corner-bottom
+    ui-widget-content" aria-hidden="true" style="display: none;">
+            <p>Questions:</p>
+            <br>
+            "4. Explain what DDL and DML mean and their uses"
+            <br>
+            "Answer:"
+            <br>
+        </div>
+
+        <div id="2-qs-5" aria-labelledby="ui-id-20" role="tabpanel" class="ui-tabs-panel ui-corner-bottom
+    ui-widget-content" aria-hidden="true" style="display: none;">
+            <p>Questions:</p>
+            <br>
+            "5. Describe how to make a MySQL DBMS on Azure and its uses"
+            <br>
+            "Answer:"
+            <br>
+        </div>
+
+    </div>
+
+    <div id="area-3" aria-labelledby="ui-id-4" role="tabpanel" class="ui-tabs-panel ui-corner-bottom
+    ui-widget-content" aria-hidden="true" style="display: none;">
+        <ul role="tablist" class="ui-tabs-nav ui-corner-all ui-helper-reset ui-helper-clearfix ui-widget-header">
+            <li role="tab" tabindex="-1" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab"
+                aria-controls="3-qs-1" aria-labelledby="ui-id-21" aria-selected="false" aria-expanded="false">
+                <a href="#3-qs-1" tabindex="-1" class="ui-tabs-anchor" id="ui-id-21">1</a>
+            </li>
+            <li role="tab" tabindex="-1" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab"
+                aria-controls="3-qs-2" aria-labelledby="ui-id-22" aria-selected="false" aria-expanded="false">
+                <a href="#3-qs-2" tabindex="-1" class="ui-tabs-anchor" id="ui-id-22">1</a>
+            </li>
+            <li role="tab" tabindex="-1" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab"
+                aria-controls="3-qs-3" aria-labelledby="ui-id-23" aria-selected="false" aria-expanded="false">
+                <a href="#3-qs-3" tabindex="-1" class="ui-tabs-anchor" id="ui-id-23">1</a>
+            </li>
+            <li role="tab" tabindex="-1" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab"
+                aria-controls="3-qs-4" aria-labelledby="ui-id-24" aria-selected="false" aria-expanded="false">
+                <a href="#3-qs-4" tabindex="-1" class="ui-tabs-anchor" id="ui-id-24">1</a>
+            </li>
+        </ul>
+
+        <div id="3-qs-1" aria-labelledby="ui-id-21" role="tabpanel" class="ui-tabs-panel ui-corner-bottom
+    ui-widget-content" aria-hidden="true" style="display: none;">
+            <p>Questions:</p>
+            <br>
+            "1. Describe what makes concurrency issues a problem"
+            <br>
+            "Answer:"
+            <br>
+        </div>
+
+        <div id="3-qs-2" aria-labelledby="ui-id-22" role="tabpanel" class="ui-tabs-panel ui-corner-bottom
+    ui-widget-content" aria-hidden="true" style="display: none;">
+            <p>Questions:</p>
+            <br>
+            "2. Describe a type of concurrency issues with examples"
+            <br>
+            "Answer:"
+            <br>
+        </div>
+
+        <div id="3-qs-3" aria-labelledby="ui-id-23" role="tabpanel" class="ui-tabs-panel ui-corner-bottom
+    ui-widget-content" aria-hidden="true" style="display: none;">
+            <p>Questions:</p>
+            <br>
+            "3. Is there a standard way to solve concurrency issues?"
+            <br>
+            "Answer:"
+            <br>
+        </div>
+
+        <div id="3-qs-4" aria-labelledby="ui-id-24" role="tabpanel" class="ui-tabs-panel ui-corner-bottom
+    ui-widget-content" aria-hidden="true" style="display: none;">
+            <p>Questions:</p>
+            <br>
+            "4. Describe a deadlock"
+            <br>
+            "Answer:"
+            <br>
+        </div>
+
+    </div>
+
+    <div id="area-4">
+        <p>todo</p>
+    </div>
+    <div id="webs" aria-labelledby="ui-id-6" role="tabpanel" class="ui-tabs-panel ui-corner-bottom
+    ui-widget-content" aria-hidden="true" style="display: none;">
+        <table>
+            <tbody>
+            <tr>
+                <td>
+                    Name
+                </td>
+                <td style="padding-left: 20px;padding-right: 20px">
+                    <input id="name" alt="Click the button" title="Click the button">
+                </td>
+                <td>
+                    <button id="btnRun">Test Webservice</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <br><br><br>
+        <b>Result from Webservice</b>
+        <div id="webresult"></div>
+    </div>
+
+
+</div>
+</body>
+</html>
