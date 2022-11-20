@@ -247,6 +247,42 @@ $(function () {
 });
 
 $(function () {
+    $("#t-2-3-0").hover(function () {
+        $(".container h3").css("background-color", "transparent");
+        $("#t-2-3-0").css("background-color", "lightgray");
+        $(".container .image").css("visibility", "hidden");
+        $("#i-2-3-0").css("visibility", "visible");
+    })
+});
+
+$(function () {
+    $("#t-2-3-1").hover(function () {
+        $(".container h3").css("background-color", "transparent");
+        $("#t-2-3-1").css("background-color", "lightgray");
+        $(".container .image").css("visibility", "hidden");
+        $("#i-2-3-1").css("visibility", "visible");
+    })
+});
+
+$(function () {
+    $("#t-2-3-2").hover(function () {
+        $(".container h3").css("background-color", "transparent");
+        $("#t-2-3-2").css("background-color", "lightgray");
+        $(".container .image").css("visibility", "hidden");
+        $("#i-2-3-2").css("visibility", "visible");
+    })
+});
+
+$(function () {
+    $("#t-2-3-3").hover(function () {
+        $(".container h3").css("background-color", "transparent");
+        $("#t-2-3-3").css("background-color", "lightgray");
+        $(".container .image").css("visibility", "hidden");
+        $("#i-2-3-3").css("visibility", "visible");
+    })
+});
+
+$(function () {
     $("#t-2-4-0").hover(function () {
         $(".container h3").css("background-color", "transparent");
         $("#t-2-4-0").css("background-color", "lightgray");
@@ -407,6 +443,7 @@ $(function () {
         $("#i-4-4-2").css("visibility", "visible");
     })
 });
+
 
 $(function () {
     $(".flex-container .container h2, .question").hover(function () {
